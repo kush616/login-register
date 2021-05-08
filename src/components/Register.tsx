@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
 import Button from '@material-ui/core/Button'
 import EmailIcon from '@material-ui/icons/Email';
@@ -59,13 +59,14 @@ const handleRegister=()=>{
 setEmail('')
 setPass('')
 
+
   }
   else{
     alert("Unsucessful")
   }
 
 
-
+return <Redirect to="/login"></Redirect>
 
 }
 
